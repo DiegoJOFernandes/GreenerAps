@@ -6,7 +6,6 @@
     overflow-y: scroll;
   }
 </style>
-<body>
   <%- include ('partials/navbar.ejs') %>
     <h4>chat greener</h4>
     <div id="chat">
@@ -32,5 +31,5 @@
         socket.emit("msg", { msg: msg, username: username })
       }
     </script>
-</body>
+
 <%- include ('partials/footer.ejs') %>
