@@ -56,7 +56,7 @@ router.post("/authenticate", (req, res) => {
           id: user.id,
           email: user.email
         }
-        res.redirect("/admin/menu")
+        res.redirect("/menu")
       }else{
         res.redirect('/login')
       }

@@ -1,5 +1,11 @@
 <%- include ('partials/header.ejs') %>
   <%- include ('partials/navbar.ejs') %>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Menu</li>
+    </ol>
+  </nav>
 
   <div class="container text-center">
     <div class="row">
@@ -22,10 +28,22 @@
       </div>
     </div>
   </div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+    </div>
+  </div>
   
   <div class="container">
-    <h1>Bem vindo <%= login %>!</h1>
-    <hr>
     <h3>Menu de Opções</h3>
       <br>
       <a href="/chat" class="btn btn-success">Chat</a>

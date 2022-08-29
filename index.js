@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/chat', adminAuth, (req, res) => {
-  res.render('chat')
+  res.render('chat', {saveport: saveport})
 })
 
 app.get('/registros', adminAuth, (req, res)=>{
@@ -92,7 +92,10 @@ io.on("connection",(socket) => {
   })
 })
 
-http.listen(process.env.PORT || 4000, () => {
+const saveport = process.env.PORT || 4000
+http.listen(saveport, () => {
   console.log('APP RODANDO!')
   //http://localhost:4000
 })
+
+module.exports = saveport
